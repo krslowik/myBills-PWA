@@ -2,7 +2,9 @@
 
 🔗 **Wersja online:** https://krslowik.github.io/myBills-PWA/
 
-![Zrzut ekranu aplikacji](screenshot.png)
+<p align="center">
+  <img src="screenshot.png" alt="Zrzut ekranu aplikacji" width="300">
+</p>
 
 Prosta aplikacja PWA do kontrolowania stałych miesięcznych rachunków.
 Użytkownik tworzy listę rachunków (np. Tauron, czynsz, internet) i co miesiąc
