@@ -1,5 +1,9 @@
 # Moje Rachunki – aplikacja PWA
 
+🔗 **Wersja online:** https://krslowik.github.io/myBills-PWA/
+
+![Zrzut ekranu aplikacji](screenshot.png)
+
 Prosta aplikacja PWA do kontrolowania stałych miesięcznych rachunków.
 Użytkownik tworzy listę rachunków (np. Tauron, czynsz, internet) i co miesiąc
 odhacza te, które zapłacił. Przy zapłaconej pozycji wyświetla się data zaznaczenia.
@@ -39,15 +43,12 @@ projektu, kliknąć prawym przyciskiem na `index.html` → _Open with Live Serve
 npx serve .
 ```
 
-lub
-
-```
-python -m http.server 8000
-```
-
 a następnie otworzyć w przeglądarce `http://localhost:8000` (lub adres podany przez `serve`).
 
 ## Instalacja na telefonie
+
+Otwórz https://krslowik.github.io/myBills-PWA/ na telefonie, a następnie:
+ 
 
 - **Android (Chrome):** menu ⋮ → _Zainstaluj aplikację_ / _Dodaj do ekranu głównego_,
 - **iPhone (Safari):** _Udostępnij_ → _Do ekranu początkowego_.
