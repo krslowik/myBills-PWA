@@ -1,12 +1,6 @@
-// ===== Dane =====
-// bills    – lista rachunków: [{ id, name }]
-// payments – zapłacone rachunki w danym miesiącu: { '2026-11': { id: 'data zapłaty' } }
-
 let bills = JSON.parse(localStorage.getItem('bills')) || []
 let payments = JSON.parse(localStorage.getItem('payments')) || {}
 
-// Klucz bieżącego miesiąca, np. '2026-11'
-// Dzięki temu w nowym miesiącu wszystkie rachunki są znowu niezapłacone
 const now = new Date()
 const monthKey = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0')
 
@@ -17,7 +11,6 @@ function save() {
 	localStorage.setItem('payments', JSON.stringify(payments))
 }
 
-// ===== Wyświetlanie =====
 const list = document.getElementById('bill-list')
 const empty = document.getElementById('empty')
 
@@ -65,7 +58,6 @@ function render() {
 	})
 }
 
-// ===== Akcje =====
 document.getElementById('add-form').addEventListener('submit', event => {
 	event.preventDefault()
 	const input = document.getElementById('bill-name')
@@ -100,9 +92,9 @@ function deleteBill(id) {
 
 render()
 
-// ===== Service Worker =====
 if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('./sw.js')
+	navigator.serviceWorker
+		.register('./sw.js')
 		.then(reg => console.log('Service Worker zarejestrowany', reg))
 		.catch(err => console.error('Błąd rejestracji Service Workera', err))
 }
